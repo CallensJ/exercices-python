@@ -2,6 +2,12 @@
 
 Dépôt centralisant mes exercices d'apprentissage Python. Chaque exercice vit dans son propre dossier sous `exercices/`, avec son énoncé et sa solution.
 
+## But du repo
+
+J'apprends Python **manuellement**, en écrivant moi-même chaque solution sans assistance IA. Le seul rôle de l'IA ici est de me fournir un **exercice journalier**, avec une difficulté croissante au fil du temps.
+
+L'objectif final n'est pas ces exercices en eux-mêmes : je veux développer une **application desktop** en Python, un projet actuellement au-dessus de mon niveau actuel. Ces exercices sont donc dirigés spécifiquement pour construire, étape par étape, les compétences nécessaires à ce projet principal.
+
 ## Structure
 
 ```
