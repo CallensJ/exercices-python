@@ -1,0 +1,17 @@
+#Projet de convertisseur d'images.
+
+Image tool convertis les images d'une extension vers le format WebP.
+
+L'utilisateur a deux options pour convertir ses images.
+
+OPTION 1:
+    Via un bouton, l'utilisateur indique le chemin source du dossier contenant les images a convertir,
+    il selectionne un dossier de destination, ou seront copie les fichiers images convertis.
+    Si aucun dossier source n'a ete indique, alors c'est l'option 2 qui prend automatiquement le relai. A savoir:
+
+OPTION 2 :
+    L'utilisateur drag,n drop manuellement les fichiers qu'il souhaites convertir.
+
+les fichier a convertir apparaissent automatiquement en liste . leur nom, extension, resolution, et poids sur le disque sont indique.
+l'utilisateur clique sur un bouton "convertir" pour lancer la conversion. une barre de progression indique l'etat d'avancement general.
+un signal visuel "A convertir : en cours : Done " se trouve a droite de chaque image.
