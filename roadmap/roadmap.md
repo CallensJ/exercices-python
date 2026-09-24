@@ -1,338 +1,179 @@
-# Roadmap d'Apprentissage Python : Du Débutant au Confirmé appliqué à la Cybersécurité
+# Roadmap : Développeur Python Web & Cybersécurité Applicative (2026)
 
-Cette roadmap d'apprentissage est conçue **exclusivement à partir des sources documentaires de ce Notebook**. Elle présente un parcours structuré, précis et exploitable, découpé en phases de compétences progressives. Son but est de vous mener de la découverte du langage jusqu'à un niveau d'ingénieur confirmé capable d'analyser du code professionnel, de réussir des entretiens techniques exigeants et de développer des scripts et outils de cybersécurité robustes au sein de laboratoires d'essais ou d'environnements autorisés.
-
----
-
-## Phase 1 : Fondamentaux de Python (Niveau Débutant)
-
-Cette phase établit les bases syntaxiques et logiques indispensables. Vous y apprendrez à interagir avec l'interpréteur de commandes et à construire les premiers blocs logiques de vos programmes [5, 128].
-
-*   **Concepts Python à maîtriser :**
-    *   Expressions, valeurs, variables et affectations [5, 44].
-    *   Types de données fondamentaux : entiers (`int`), flottants (`float`), chaînes de caractères (`str`), booléens (`bool`) [5, 26].
-    *   Opérateurs arithmétiques, logiques et de comparaison [2, 6, 44].
-    *   Règles de précédence des opérateurs (supériorité des opérateurs de `**` jusqu'aux opérateurs d'affectation) [41].
-    *   Contrôle de flux : blocs de code définis par l'indentation, instructions conditionnelles `if`, `elif`, `else` [6, 16, 43].
-    *   Boucles répétitives : boucles conditionnelles `while` et boucles bornées `for` associées à la fonction `range()` [2, 26, 262].
-    *   Fonctions intégrées de base : `print()`, `input()`, `len()`, `abs()`, `round()` [5].
-    *   Détection et conversion de types : `type()`, `int()`, `float()`, `str()` [5, 43].
-*   **Compétences pratiques à acquérir :**
-    *   Savoir exécuter des instructions directement dans le shell interactif [5].
-    *   Manipuler des chaînes (concaténation et réplication) [5].
-    *   Traduire une logique métier ou algorithmique simple en branchements conditionnels indentés à 4 espaces [6, 43].
-    *   Identifier et corriger des erreurs de syntaxe de base (ex. guillemets non fermés, blocs non indentés) [14, 15, 17].
-*   **Bibliothèques ou outils pertinents :**
-    *   L'interpréteur Python standard [26].
-    *   Un éditeur de code léger ou IDE (comme VSCode, PyCharm ou Mu) [31].
-*   **Exercices ou types de projets recommandés :**
-    *   *Fizz Buzz* : implémentation de conditions de divisibilité imbriquées dans une boucle [2].
-    *   *Xmas Tree Printer (`xmasTreePrint.py`)* : affichage d'une structure géométrique de caractères dans le terminal en combinant boucles imbriquées et réplication de chaînes [2, 8].
-    *   *Spike / Zigzag* : création d'une animation en boucle générant des lignes de caractères de longueurs variables avec contrôle de délai [86, 87, 89].
-*   **Critères de validation :**
-    *   Être capable de concevoir, d'écrire et d'exécuter un script simple faisant intervenir des entrées utilisateur et des boucles sans provoquer d'erreurs de syntaxe ou d'indentation [5, 43].
-*   **Connaissances complémentaires requises :**
-    *   Notions élémentaires sur l'utilisation du terminal (ligne de commande de base) et de l'arborescence des fichiers du système d'exploitation [26, 31, 32].
+Cette feuille de route détaille l'apprentissage progressif, de niveau **Débutant à Expert**, pour devenir un **Développeur Web Python accompli**. Elle met l'accent sur **FastAPI** comme framework principal, couvre les **fondamentaux de Django et Flask**, et se termine par une **phase complète de cybersécurité applicative web**.
 
 ---
 
-## Phase 2 : Structures de données et Fonctions (Niveau Débutant → Intermédiaire)
+## 📍 Phase 1 : Socle Python Moderne & Fondations du Web (Débutant)
 
-Pour concevoir des applications modulaires, vous devez comprendre comment structurer de larges volumes de données et organiser votre code en composants réutilisables [16, 78, 242].
+### 1.1 Langage Python Core (3.12+)
+* **Syntaxe & Structures de Données** : Types primitifs, listes, tuples, dictionnaires, ensembles, compréhensions de listes/dict.
+* **Programmation Orientée Objet (POO)** : Classes, attributs, méthodes, héritage, polymorphisme, encapsulage, métaclasses.
+* **Gestion des Exceptions & Ressources** : Blocs `try/except/finally`, exceptions personnalisées, gestionnaires de contexte (`with`).
+* **Fonctionnalités Avancées** : Décorateurs, générateurs, itérateurs, pattern matching (`match/case`).
 
-*   **Concepts Python à maîtriser :**
-    *   **Listes** : structures ordonnées, indexation positive/négative, découpage ("slices"), méthodes de modification, copie superficielle (`copy.copy()`) et copie profonde (`copy.deepcopy()`) [3, 125, 144, 306].
-    *   **Dictionnaires** : paires clé-valeur, insertion, mise à jour, suppression d'éléments, méthode `.get()` pour éviter les KeyErrors, itération via `.items()`, `.keys()` et `.values()` [4, 126, 243, 247, 248, 270, 299].
-    *   **Tuples** : collections ordonnées immuables (générées par exemple lors du retour de valeurs multiples) [26, 264, 266].
-    *   **Ensembles (Sets)** : collections non ordonnées d'éléments uniques, optimisation des tests d'appartenance (`in` / `not in`), opérations d'union et d'intersection [26, 106, 149].
-    *   **Fonctions** : définition (`def`), paramètres positionnels et nommés, arguments, valeurs de retour (`return`), gestion de la valeur `ons` par défaut (`None`) [9, 79, 124].
-    *   **Cycles de vie et scopes** : pile d'appels ("call stack"), portée locale et globale des variables, utilisation sécurisée de l'instruction `global` [3, 9, 81].
-*   **Compétences pratiques à acquérir :**
-    *   Modéliser des entités complexes en combinant des structures imbriquées (par ex. listes de dictionnaires) [4, 301].
-    *   Utiliser l'affectation multiple (unpacking) dans les boucles pour dissocier clés et valeurs [125, 299].
-    *   Modulariser un long script en découpant les tâches dans des fonctions spécialisées [8, 10].
-*   **Bibliothèques ou outils pertinents :**
-    *   Module standard `collections` : utilisation de conteneurs spécialisés comme `defaultdict` (pour l'indexation dynamique), `deque` (pour les files performantes) et `namedtuple` [267, 271, 306].
-*   **Exercices ou types de projets recommandés :**
-    *   *Pangram Detector (`is_pangram`)* : fonction validant si une phrase contient toutes les lettres de l'alphabet à l'aide d'ensembles [144].
-    *   *Validateur de grille d'échecs (`isValidChessBoard`)* : fonction modélisant un échiquier par un dictionnaire et validant sa structure (positions, nombre de pièces par couleur) [303].
-    *   *Picnic Guest Tracker* : fonction lisant un dictionnaire imbriqué représentant des invités et leurs contributions, puis calculant la somme totale par type d'article apporté [301, 302].
-    *   *Weather Data Analyzer (`avgTemp.py`)* : générateur de dictionnaires de données aléatoires stockés dans une liste, puis calcul de la moyenne de température [146, 147].
-*   **Critères de validation :**
-    *   Être capable d'écrire des fonctions pures et d'itérer de manière fluide sur des dictionnaires imbriqués complexes tout en évitant les erreurs de portée globale/locale [3, 10].
-*   **Connaissances complémentaires requises :**
-    *   Notions algorithmiques fondamentales : représentation de données, logique ensembliste.
+### 1.2 Typage Statique & Outillage Modern (2026)
+* **Type Hints** : Annotations de type systématiques (`Union`, `Optional`, `TypedDict`, Generics).
+* **Analyse Statique** : Validation avec `mypy` ou `pyright`.
+* **Linting & Formatage** : Adoption du linter ultra-rapide `Ruff` (remplaçant Flake8, Black et isort).
+* **Gestion de Projet & Dépendances** : Utilisation de `pyproject.toml`, gestionnaires modernes `uv` ou `Poetry` (abandon progressif de `pip` brut).
+
+### 1.3 Fondations du Web & Protocole HTTP
+* **Protocole HTTP/HTTPS** : Structure des requêtes/réponses, méthodes HTTP (`GET`, `POST`, `PUT`, `DELETE`, `PATCH`), codes de statut (2xx, 3xx, 4xx, 5xx), en-têtes (headers), cookies.
+* **Formats de Données** : Manipulation du JSON, Query Parameters, Form Data, Multipart uploads.
+* **Architecture Client-Serveur & REST** : Principes RESTful, conception d'endpoints, statelessness.
 
 ---
 
-## Phase 3 : Programmation Orientée Objet (OOP) (Niveau Intermédiaire)
+## 📍 Phase 2 : Flask — Fondamentaux du Micro-Framework (Intermédiaire)
 
-La programmation orientée objet fournit un cadre de travail structuré pour organiser votre code autour de "blueprints" logiques appelés classes, facilitant la maintenabilité et l'abstraction [19, 20].
+### 2.1 Philosophie Micro-Framework & WSGI
+* **Standard WSGI** : Comprendre le rôle de la passerelle serveur/application (WSGI vs ASGI).
+* **Design Minimaliste** : Approche "Bring Your Own Architecture" de Flask.
 
-*   **Concepts Python à maîtriser :**
-    *   Paradigme de l'orientation objet : classes comme plans et objets comme instances de ces plans [19, 26].
-    *   Attributs (données de l'objet) et méthodes (comportements de l'objet) [19].
-    *   Méthode constructeur `__init__()` pour l'initialisation des variables d'instance [14, 139].
-    *   Mécanisme de l'héritage : création de classes enfants spécialisées héritant d'une classe parente [20, 26].
-    *   Polymorphisme : redéfinition (surcharge) de méthodes héritées de la classe parente dans les classes enfants [20].
-    *   Encapsulation : regroupement des données et restriction de l'accès direct aux attributs via des membres privés (préfixés d'un double tiret bas `__` comme `self.__secret_entry`) et exposition de getters/setters sécurisés [21, 26].
-    *   Abstraction et classes de base abstraites (Abstract Base Classes) [26, 159].
-*   **Compétences pratiques à acquérir :**
-    *   Concevoir des architectures logicielles modulaires en séparant clairement les responsabilités au sein de classes [20].
-    *   Protéger l'intégrité des variables sensibles d'une instance pour empêcher des modifications intempestives par du code externe [21].
-    *   Documenter ses classes et fonctions à l'aide de docstrings exploitables via la variable par défaut `__doc__` [25, 88].
-*   **Bibliothèques ou outils pertinents :**
-    *   Fonction interne `dir()` pour inspecter les propriétés et méthodes d'un objet [81, 86].
-    *   Variable magique `__doc__` [88].
-*   **Exercices ou types de projets recommandés :**
-    *   *Surcharge de display* : conception d'une classe de base `Car` et d'une classe enfant `Truck` héritant de `Car` mais redéfinissant la méthode d'affichage `display()` [20].
-    *   *Journal sécurisé (`Diary`)* : implémentation d'une classe avec attribut d'instance privé `self.__secret_entry` et méthodes d'écriture et de lecture publiques restreintes [9].
-    *   *Système de fichiers métadonnées* : conception de classes pour représenter un système de fichiers hiérarchisé, comprenant une classe de base `Entity` (attributs communs `id` et `name`) et des sous-classes spécialisées `File` (avec un attribut `size`) et `Directory` (gérant une liste d'enfants) [117, 121].
-*   **Critères de validation :**
-    *   Savoir définir, instancier et manipuler une hiérarchie de classes modélisant un système réel, en implémentant l'encapsulation de données de manière stricte [21].
-*   **Connaissances complémentaires requises :**
-    *   Modélisation de données (diagrammes de classes logiques).
+### 2.2 Core Flask & Templating
+* **Routage & Requêtes** : Décorateurs `@app.route()`, gestion des paramètres d'URL, objet global `request`.
+* **Moteur Jinja2** : Rendu de templates, héritage HTML, filtres, échappement automatique anti-XSS.
+
+### 2.3 Écosystème & Extensions Clés
+* **Base de Données & ORM** : `Flask-SQLAlchemy` pour les requêtes BDD, migrations avec Alembic (`Flask-Migrate`).
+* **Formulaires & Validation** : `Flask-WTF` / WTForms (validation côté serveur, jetons CSRF intégrés).
+* **Gestion des Utilisateurs** : Authentification par session avec `Flask-Login` ou par token avec `Flask-JWT-Extended`.
+* **Sécurisation de Base** :
+  * En-têtes HTTP de sécurité avec `Flask-Talisman`.
+  * Limitation de débit avec `Flask-Limiter`.
+  * Inspection dynamique des requêtes avec `flaskapi-guard`.
 
 ---
 
-## Phase 4 : Gestion des erreurs, Fichiers, Modules et Packages (Niveau Intermédiaire)
+## 📍 Phase 3 : Django — Fondamentaux du Framework Full-Stack (Intermédiaire)
 
-Un code professionnel doit interagir de manière robuste avec son environnement : lire et écrire des fichiers, gérer des répertoires et s'organiser en packages sans jamais crasher de manière inattendue [17, 21, 82].
+### 3.1 Architecture MVT (Model-View-Template)
+* **Philosophie "Batteries Incluses"** : Structure opinionnée du projet, conventions de nommage et d'organisation.
+* **Routage & Vues** : Cartographie d'URL (`urls.py`), vues basées sur des fonctions (FBV) et sur des classes (CBV).
 
-*   **Concepts Python à maîtriser :**
-    *   Gestion défensive des erreurs : distinction entre les erreurs de syntaxe (détectées lors du parsing) et les exceptions à l'exécution [17].
-    *   Utilisation des blocs de capture `try` et `except` [9, 138].
-    *   Clauses avancées : `else` (s'exécute si aucune exception ne survient) et `finally` (s'exécute systématiquement pour libérer les ressources) [18, 138].
-    *   Déclenchement d'exceptions personnalisées à l'aide de l'instruction `raise` [12, 18, 85].
-    *   Manipulation de fichiers textuels et binaires : fonction intégrée `open()` et modes de lecture/écriture [21].
-    *   Gestionnaires de contexte : utilisation de l'instruction `with` assurant la fermeture automatique des ressources système [25].
-    *   Modules et Packages : organisation du code dans des fichiers `.py` (modules) et des arborescences de dossiers (packages) contenant un fichier d'initialisation `__init__.py` [23, 82, 89].
-    *   Rôle du chemin de recherche `PYTHONPATH` [83, 89].
-*   **Compétences pratiques à acquérir :**
-    *   Éviter les plantages système en interceptant de manière ciblée les exceptions courantes (ex. `ZeroDivisionError`, `ValueError`, `FileNotFoundError`, `ModuleNotFoundError`) [14, 84, 130, 136].
-    *   Lire et écrire de gros fichiers par blocs pour préserver la mémoire vive [21, 231].
-    *   Créer et distribuer ses propres modules et packages réutilisables [83, 89].
-*   **Bibliothèques ou outils pertinents :**
-    *   Module `zipfile` : compression et extraction d'archives de fichiers [11, 307].
-    *   Module `shutil` : opérations de haut niveau sur les fichiers et dossiers (copie, déplacement) [190, 209].
-*   **Exercices ou types de projets recommandés :**
-    *   *Calculateur résilient* : fonction de division prenant des entrées utilisateur complexes et gérant les entrées non numériques (`TypeError`) et les divisions par zéro [84].
-    *   *Safe File Copier with Logging* : script de copie de fichier sécurisé (`shutil.copy2`) interceptant toutes les exceptions d'I/O et écrivant les statuts ou erreurs rencontrées dans un fichier de trace [209].
-    *   *Zip Text Extractor* : script ouvrant une archive zip donnée, listant ses fichiers et extrayant sélectivement uniquement les fichiers se terminant par l'extension `.txt` dans un dossier temporaire [307].
-*   **Critères de validation :**
-    *   Être capable d'écrire des scripts effectuant des entrées/sorties sur disque dur de façon sécurisée (avec fermeture garantie des descripteurs de fichiers) et d'organiser son code dans un package fonctionnel [25, 89].
-*   **Connaissances complémentaires requises :**
-    *   Permissions de fichiers sur les systèmes d'exploitation, chemins d'accès absolus vs relatifs [21, 22].
+### 3.2 Django ORM & Base de Données
+* **Modélisation** : Définition des modèles, relations (`ForeignKey`, `OneToOne`, `ManyToManyField`).
+* **Migrations Automatisées** : Commandes `makemigrations` et `migrate`, gestion de l'évolution des schémas BDD.
+* **Optimisation des Requêtes** : Prévention du problème N+1 avec `select_related` et `prefetch_related`.
+
+### 3.3 Fonctionnalités Natives & Écosystème
+* **Interface d'Administration** : Personnalisation du Django Admin pour la gestion de contenu et de données.
+* **Authentification & Permissions** : Système `django.contrib.auth`, gestion des rôles, groupes et autorisations.
+* **Django REST Framework (DRF)** :
+  * Sérialiseurs (`Serializers` / `ModelSerializers`).
+  * APIViews, GenericViews, `ViewSets` et `Routers`.
+* **Nouveautés Django 6.0 (2026)** :
+  * Tâches d'arrière-plan intégrées (*Built-in background tasks*).
+  * Support natif de la Politique de Sécurité du Contenu (`ContentSecurityPolicyMiddleware`).
+  * Async complet (views, ORM, middleware).
 
 ---
 
-## Phase 5 : Python intermédiaire, idiomatique et Qualité du code (Niveau Intermédiaire → Avancé)
+## 📍 Phase 4 : FastAPI — Mastery du Framework Asynchrone & APIs (Spécialisation Principale)
 
-Cette phase vise à optimiser l'efficacité de vos programmes, à adopter une syntaxe élégante ("Pythonic") et à professionnaliser vos méthodes de débogage et de validation [25, 90, 150].
+### 4.1 Architecture Asynchrone & Serveurs ASGI
+* **Asynchronisme Python** : Programmation concurrente I/O-bound avec `async` et `await`, boucles d'événements (`asyncio`).
+* **Serveurs ASGI** : Exécution de haute performance avec Uvicorn et Gunicorn.
 
-*   **Concepts Python à maîtriser :**
-    *   Compréhensions de structures de données : list comprehensions, compréhensions de dictionnaires et de sets pour générer des collections en une seule ligne de code performante [149, 240, 260].
-    *   Fonctions anonymes (opérateur `lambda`) pour des transformations à la volée [151, 264].
-    *   Programmation fonctionnelle de base : utilisation de filtres (`filter`) et de réducteurs [161, 265].
-    *   Fermetures logicielles ("closures") : fonctions imbriquées mémorisant les valeurs de leur scope d'origine [150].
-    *   Générateurs : production d'itérables à la volée à l'aide de l'instruction `yield` pour une évaluation paresseuse ("lazy evaluation") et économe en mémoire [150, 151, 207].
-    *   Décorateurs : modification dynamique et interception du comportement de fonctions tierces sans altérer leur code d'origine [150, 151].
-    *   Assertions de code : utilisation d'instructions `assert` pour lever une `AssertionError` en cas d'incohérence interne, permettant d'échouer rapidement ("fail-fast") [11, 13, 90].
-    *   Journalisation structurée (`logging`) : implémentation systématique de traces avec gestion des cinq niveaux de gravité (DEBUG, INFO, WARNING, ERROR, CRITICAL) [13, 295].
-    *   Désactivation globale ou sélective des logs avec `logging.disable()` [135, 297].
-    *   Typage de variables : annotations de types depuis Python 3.6 pour clarifier les interfaces logicielles [43, 271].
-    *   Style et standardisation : respect strict du style PEP 8 et documentation par docstrings [25].
-*   **Compétences pratiques à acquérir :**
-    *   Remplacer les boucles d'itération lourdes par des compréhensions de listes optimisées [240, 261].
-    *   Écrire des fonctions génératrices pour manipuler des flux de données potentiellement infinis sans saturer la RAM [150].
-    *   Remplacer définitivement l'usage de la fonction `print()` pour le débogage par des assertions "fail-fast" et un module de logging paramétré [13, 135, 291].
-    *   Utiliser des débogueurs interactifs pour exécuter du code ligne par ligne et inspecter l'état des variables [4, 18, 90].
-*   **Bibliothèques ou outils pertinents :**
-    *   Module standard `re` : filtrage et recherche ultra-rapide par expressions régulières [1, 85, 231].
-    *   Module standard `logging` [13, 292].
-    *   Framework standard de tests unitaires `unittest` [15, 160].
-    *   Débogueur intégré `pdb` (utilisation de `import pdb; pdb.set_trace()`) ou le débogueur de l'éditeur Mu [18, 90, 133].
-*   **Exercices ou types de projets recommandés :**
-    *   *Filtre de carrés pairs* : utilisation d'une liste de départ, mise au carré de ses éléments et filtrage des nombres pairs via list comprehension [260].
-    *   *Générateur de flux infini / Compte à rebours* : création d'une fonction génératrice utilisant `yield` pour distribuer des valeurs une à une [4, 7].
-    *   *Fibonacci / Factorial Logger* : implémentation d'un script de calcul mathématique intégrant des logs à chaque étape de la boucle pour tracer les valeurs calculées et corriger un bug inséré à dessein [291, 292].
-    *   *Suite de Tests Unitaires (`TestStringMethods`)* : création d'une classe de tests héritant de `unittest.TestCase` pour valider de manière automatisée le comportement de fonctions personnalisées [15].
-*   **Critères de validation :**
-    *   Être capable d'écrire un code performant et idiomatique (PEP 8), documenté et couvert par un fichier de tests unitaires et des logs structurés [15, 25, 294].
-*   **Connaissances complémentaires requises :**
-    *   Guide de style officiel PEP 8, concepts fondamentaux de test de logiciel [25, 160].
+### 4.2 Validation de Données Stricte avec Pydantic V2
+* **Modèles Pydantic** : Déclaration des schémas d'entrée et de sortie, parsing automatique, typage fort.
+* **Performance V2** : Utilisation du moteur Pydantic Core écrit en Rust (5x plus rapide).
+* **Validation Avancée** : Annotations `Field`, validateurs personnalisés, `Settings` pour la configuration applicative.
+
+### 4.3 Injection de Dépendances (`Depends`) & BDD Async
+* **Système de Dépendances** : Réutilisation de logique (authentification, vérification des rôles, transactions BDD).
+* **ORM Async Moderne** : Intégration de `SQLAlchemy 2.x` (mode async) ou `SQLModel`.
+* **Gestion des Sessions BDD** : Context managers asynchrones, pooling de connexions PostgreSQL.
+
+### 4.4 Sécurité Intégrée & Documentation Automatique
+* **Flux OAuth2 & JWT** : Utilisation de `OAuth2PasswordBearer`, génération et vérification des jetons JWT.
+* **Gestion des Portées (Scopes)** : Contrôle d'accès fin avec `Security(get_current_user, scopes=[...])`.
+* **OpenAPI & Swagger** : Documentation interactive générée automatiquement (`/docs` et `/redoc`).
+
+### 4.5 Architectures Avancées & Frontend Léger
+* **Découpage Modulaire** : Structuration d'applications à grande échelle avec `APIRouter`.
+* **Tâches Asynchrones Légères & In-depth** : `BackgroundTasks` natives et intégration de Celery / Redis / RabbitMQ.
+* **Arch Web Moderne "Python + HTMX"** :
+  * Rendu de fragments HTML côté serveur via Jinja2 + FastAPI.
+  * Alternative performante évitant la sur-ingénierie des SPA React/Next.js pour les dashboards et outils internes.
 
 ---
 
-## Phase 5bis : Aperçu FastAPI et Django (Niveau Intermédiaire → Avancé)
+## 📍 Phase 5 : Industrialisation, Déploiement & DevOps (Avancé)
 
-Cette phase n'est pas issue des sources originales du Notebook mais a été ajoutée pour couvrir l'objectif webdev de l'apprenant. Il ne s'agit pas d'une spécialisation complète (l'objectif final reste la cybersécurité) mais d'un aperçu suffisant pour être capable de lire, comprendre et adapter du code FastAPI ou Django professionnel. Elle s'appuie directement sur les acquis des Phases 3 (OOP), 4 (erreurs, fichiers, modules) et 5 (décorateurs, typage, annotations).
+### 5.1 Containerisation & Orchestration
+* **Docker pour Python** : Multi-stage builds avec images légères (`python:3.13-slim`), exécution sous utilisateur non-root, cache Docker optimisé.
+* **Orchestration** : `docker-compose` pour les environnements locaux/staging, notions Kubernetes (Deployments, Services, Ingress).
 
-### Module A : FastAPI
+### 5.2 Production BDD & Caching
+* **Bases de Données Relationnelles** : PostgreSQL en production, pooling de connexions (`CONN_MAX_AGE`, PgBouncer).
+* **Caching Distribué** : Invalidation et stockage de cache avec Redis.
 
-*   **Concepts Python à maîtriser :**
-    *   Création de routes avec les décorateurs `@app.get()`, `@app.post()`, etc.
-    *   Validation de données avec **Pydantic** (modèles `BaseModel`, typage strict des champs).
-    *   Paramètres de requête, paramètres de chemin (`path params`) et corps de requête (`request body`).
-    *   Injection de dépendances de base (`Depends()`).
-    *   Codes de statut HTTP et gestion d'erreurs via `HTTPException`.
-*   **Compétences pratiques à acquérir :**
-    *   Démarrer un serveur de développement avec `uvicorn`.
-    *   Construire un CRUD simple (Create, Read, Update, Delete) sur une ressource unique, avec persistance dans une base SQLite légère.
-    *   Lire la documentation interactive auto-générée (`/docs`) pour tester une API.
-*   **Bibliothèques ou outils pertinents :**
-    *   `fastapi`, `uvicorn`, `pydantic`.
-    *   `sqlite3` (module standard) ou `SQLAlchemy` en version simplifiée.
-*   **Exercices ou types de projets recommandés :**
-    *   *Mini API "Todo List"* : routes GET/POST/DELETE sur une liste de tâches stockée en mémoire, puis persistée en SQLite.
-    *   *Validateur de payload* : modèle Pydantic imposant des contraintes de types et de formats sur les données reçues, avec gestion des erreurs de validation.
-*   **Critères de validation :**
-    *   Être capable de lancer une API FastAPI simple, de comprendre le rôle de chaque décorateur de route, et d'expliquer pourquoi Pydantic valide les données avant qu'elles n'atteignent la logique métier.
+### 5.3 CI/CD & Assurance Qualité
+* **GitHub Actions** : Workflows de test, linters (`Ruff`), type-checkers (`mypy`), audits de sécurité (`pip-audit`).
+* **Suite de Tests Pytest** :
+  * Tests unitaires et d'intégration avec `pytest` et `pytest-asyncio`.
+  * Mocks, fixtures, couverture de code (`pytest-cov` >= 80%).
 
-### Module B : Django
-
-*   **Concepts Python à maîtriser :**
-    *   Architecture MVT (Model-View-Template) et son fonctionnement général.
-    *   L'ORM Django : définition de modèles (`models.Model`), migrations (`makemigrations`, `migrate`).
-    *   Vues basées sur des fonctions (`function-based views`) pour commencer.
-    *   Le routage d'URL (`urls.py`).
-    *   L'interface d'administration Django (`admin.py`) générée automatiquement.
-*   **Compétences pratiques à acquérir :**
-    *   Créer un projet Django et une application interne (`django-admin startproject` / `startapp`).
-    *   Définir un modèle simple et l'enregistrer dans l'admin pour manipuler des données sans écrire de vue.
-    *   Écrire une vue basique retournant une réponse HTML ou JSON.
-*   **Bibliothèques ou outils pertinents :**
-    *   `django` (le framework lui-même).
-    *   `django-admin` (CLI de gestion de projet).
-*   **Exercices ou types de projets recommandés :**
-    *   *Carnet de contacts* : un modèle `Contact` (nom, email, téléphone), géré entièrement depuis l'admin Django, avec une vue de liste simple côté public.
-*   **Critères de validation :**
-    *   Être capable d'expliquer la différence entre un modèle FastAPI/Pydantic et un modèle Django/ORM, et de situer où se trouve la logique de validation, de routage et de persistance dans chaque framework.
-
-### Connaissances complémentaires requises
-
-*   Notions de base du protocole HTTP (méthodes, codes de statut, headers) — déjà abordées en Phase 8 pour l'audit, ici du point de vue "serveur".
-*   Notion de base de données relationnelle (tables, clés primaires/étrangères) — utile pour comprendre l'ORM Django et la persistance SQLite côté FastAPI.
+### 5.4 Observabilité & Monitoring
+* **Traces Distribuées & Métriques** : Intégration OpenTelemetry, exportation vers Prometheus / Grafana.
+* **Logs Structurés** : Formatting JSON pour la centralisation des logs (Loki / ELK).
 
 ---
 
-## Phase 6 : Algorithmique et structures de données utiles aux entretiens (Niveau Avancé)
+## 📍 Phase 6 : Cybersécurité Web & Hardening Applicatif (Expert Security)
 
-Cette phase prépare aux exigences des entretiens techniques en abordant l'analyse de complexité et la résolution méthodique de problèmes à l'aide de structures de données avancées [91, 92].
+### 6.1 Maîtrise des Risques OWASP Top 10 (Édition 2025/2026)
 
-*   **Concepts Python à maîtriser :**
-    *   **Analyse de complexité** : évaluation de la complexité temporelle et spatiale à l'aide de la notation Big-O [103, 115].
-    *   **Piles (Stacks)** : structure LIFO (Last-In, First-Out), implémentation et opérations de base (`push`, `pop`, `peek`) [102].
-    *   **Files (Queues)** : structure FIFO (First-In, First-Out), files doublement terminées (`deque`), et leur utilisation dans les parcours de graphes en largeur (BFS) [104].
-    *   **Files de priorité** : implémentation via listes triées, module `heapq` ou la classe `queue.PriorityQueue` [95].
-    *   **Structures d'arbres** : arbres binaires, calcul de profondeur maximale, traversées pré/post-ordre, et Arbres de préfixes (Trie) pour la recherche rapide de chaînes et le routage d'IP [96, 107, 121].
-    *   **Graphes** : modélisation de réseaux complexes, représentations par listes/matrices d'adjacence, parcours en profondeur (DFS) et parcours en largeur (BFS) [108, 112].
-    *   **Techniques algorithmiques phares** :
-        *   Méthode des deux pointeurs (Two-Pointer Method) pour le traitement efficace de tableaux triés ou de vecteurs creux [110].
-        *   Programmation dynamique (DP) : décomposition d'un problème complexe en sous-problèmes indépendants avec mise en cache des calculs [111].
-        *   Backtracking (Retour sur trace) : exploration systématique de toutes les solutions potentielles d'un problème combinatoire [113].
-        *   Union-Find (Disjoint Set) : gestion efficace de partitions d'ensembles et détection de connexions dynamiques [116].
-*   **Compétences pratiques à acquérir :**
-    *   Sélectionner la structure de données optimale pour garantir des opérations en temps constant $O(1)$ ou logarithmique $O(\log N)$ [105, 106].
-    *   Résoudre des problèmes complexes en utilisant la récursion et les structures arborescentes [118].
-    *   Adopter une attitude collaborative et structurée lors d'entretiens techniques : poser des questions de clarification, réfléchir à haute voix et proposer des cas de test aux limites [93, 100].
-*   **Bibliothèques ou outils pertinents :**
-    *   Modules standards `collections` (`deque`, `defaultdict`), `heapq` et `queue` [95, 267, 271].
-*   **Exercices ou types de projets recommandés :**
-    *   *Exclusive Function Time Calculator* : calcul du temps CPU exclusif alloué à chaque fonction au sein d'un CPU monothread, à partir d'un flux de logs textuels et à l'aide d'une structure de pile [103, 268, 269].
-    *   *LRU Cache (Least Recently Used)* : conception d'une structure de cache à taille fixe garantissant des opérations d'insertion, de récupération et de suppression en temps moyen $O(1)$ [105].
-    *   *Graph Tree Validator* : algorithme validant si un graphe non orienté donné est un arbre valide (connexité et absence de cycle) [109].
-    *   *Hierarchical File System Size Calculator* : fonction calculant récursivement la taille totale consommée par un dossier et ses sous-dossiers par un parcours DFS, optimisée via une structure de dictionnaire de recherche rapide [118, 121].
-*   **Critères de validation :**
-    *   Savoir résoudre des exercices algorithmiques classiques en expliquant rigoureusement les choix de structures de données et en justifiant la complexité Big-O résultante [98, 119].
-*   **Connaissances complémentaires requises :**
-    *   Théorie des graphes de base, techniques de communication interpersonnelle et de résolution de problèmes en direct [97, 99].
+1. **Broken Access Control (BOLA / IDOR)** :
+   * Risque : Accès ou modification d'objets sans vérification d'appartenance (ex: `/api/invoices/123`).
+   * Réponse : Implémenter impérativement des contrôles d'accès au niveau objet (*Object-Level Authorization*) dans le service ou la vue en vérifiant la propriété (`user_id` / `tenant_id`).
 
----
+2. **Security Misconfiguration (Erreurs de Configuration)** :
+   * Risque : Mode `DEBUG = True` en production, exposition d'interfaces d'admin/OpenAPI publiques, ports BDD exposés.
+   * Réponse : `DEBUG = False`, restriction des hôtes autorisés (`ALLOWED_HOSTS` / `TRUSTED_HOSTS` / `TrustedHostMiddleware`), masquage des schémas OpenAPI sensibles en production, isolation réseau Docker.
 
-## Phase 7 : Concurrence et programmation système (Niveau Confirmé)
+3. **Software Supply Chain Failures (Chaîne d'Approvisionnement)** :
+   * Risque : Dépendances Python obsolètes ou compromises (ex: attaques par typosquatting sur PyPI).
+   * Réponse : Verrouillage strict des versions (`uv.lock`, `poetry.lock`), audits continus avec `pip-audit` ou `Snyk` dans la CI/CD.
 
-Les programmes professionnels doivent souvent accomplir des tâches concurrentes ou interagir de manière approfondie avec le système d'exploitation hôte [201, 273].
+4. **Cryptographic Failures (Défaillances Cryptographiques)** :
+   * Risque : Mots de passe mal hachés, secrets en dur dans le code.
+   * Réponse : Hachage mémoire-difficile (`Argon2` via `argon2-cffi` ou `bcrypt`), gestion centralisée des secrets (`Pydantic Settings`, Vault, AWS Secrets Manager), HTTPS/TLS obligatoire avec HSTS.
 
-*   **Concepts Python à maîtriser :**
-    *   **Processus vs Threads** : processus disposant de leur propre espace mémoire vs threads s'exécutant simultanément au sein du même espace adressable d'un processus [273, 274].
-    *   **Dangers du multithreading** : conditions de concurrence ("race conditions"), blocages mutuels ("deadlocks"), verrous actifs ("livelocks"), famine de ressources ("thread starvation") et attente active ("busy spin") [275, 276, 277].
-    *   **Synchronisation** : contrôle d'accès aux ressources partagées à l'aide d'objets verrous (`Lock`) de la bibliothèque de threading [275, 279, 309].
-    *   **Programmation asynchrone** : utilisation du module `asyncio`, concept de boucle d'événements ("event loop"), écriture de coroutines avec `async def` et suspension via `await`, et ordonnancement concurrent de tâches [152, 153].
-    *   **Interactions avec le système** : exécution de commandes shell externes, capture de flux de sortie standard/erreur et traitement des codes de retour d'exécution [171, 201].
-    *   **Manipulation d'attributs de fichiers** : recherche récursive d'arborescences de répertoires, modification sécurisée des permissions et manipulation des horodatages système [189, 197, 199].
-*   **Compétences pratiques à acquérir :**
-    *   Écrire des programmes multithreadés sécurisés contre les race conditions en protégeant les variables critiques par des verrous [275, 280].
-    *   Utiliser la programmation asynchrone pour concevoir des applications I/O-bound hautement réactives sans bloquer l'exécution globale [152, 154].
-    *   Piloter l'OS depuis Python en gérant proprement les pipelines de données des commandes et les exceptions d'exécution d'outils tiers [171, 186].
-*   **Bibliothèques ou outils pertinents :**
-    *   Modules standards `threading` et `queue` [274, 282, 310].
-    *   Module standard `asyncio` [153].
-    *   Modules standards `os`, `sys` et `subprocess` [171, 201].
-*   **Exercices ou types de projets recommandés :**
-    *   *Contrôle de ratio moléculaire ("Build H2O")* : synchronisation de threads représentant des atomes d'oxygène et d'hydrogène à l'aide de verrous pour forcer l'affichage de molécules d'eau dans un ratio exact de 2:1 [278, 279, 280, 281, 282].
-    *   *Zéro, Pair et Impair alternés (`ZeroEvenOdd`)* : script coordonnant trois threads distincts via des verrous pour imprimer une séquence alternée de zéros, de nombres pairs et de nombres impairs [285, 286, 287, 288, 289].
-    *   *Asynchronous File & Database Reader* : script d'interrogation de base de données non bloquant utilisant `aiosqlite` et des gestionnaires d'I/O asynchrones pour lire des données volumineuses sans figer le script [154].
-    *   *Système d'analyse d'artéfacts système et réseau (`artifact_collection.log`)* : script combinant les modules `os`, `subprocess` et `socket` pour récupérer de façon sécurisée le système d'exploitation hôte, l'identité de l'utilisateur actif (`whoami`), l'adresse IP locale et les sockets ouverts (`netstat` différencié sous Linux et Windows), en redirigeant le tout dans un fichier de logging [202, 203, 204].
-    *   *Consolidateur de fichiers sensibles* : script parcourant récursivement un disque (`os.walk`), filtrant les documents aux formats spécifiques (`.docx`, `.pdf`, `.xlsx`), les consolidant dans un dossier unique (`shutil.copy`) et les archivant sous forme compressée (`zipfile`) [189, 190].
-*   **Critères de validation :**
-    *   Être capable de concevoir un démon multithreadé ou asynchrone sécurisé, ainsi que des scripts d'automatisation système portables gérant de façon étanche les erreurs de sous-processus [172, 275].
-*   **Connaissances complémentaires requises :**
-    *   Architecture des systèmes d'exploitation (gestion des privilèges, allocation CPU, processus) [185].
+5. **Injections (SQL, XSS, SSRF, Command Injection)** :
+   * **SQL Injection** : Utilisation stricte des ORM paramétrés. Interdiction de la concaténation de chaînes brutes ou d'injection dynamique de dictionnaires dans les clauses de filtres/tri.
+   * **XSS (Cross-Site Scripting)** : Échappement automatique dans Jinja2/Django Templates, évitement des filtres `mark_safe` ou `|safe`, mise en place de Content Security Policy (CSP).
+   * **SSRF (Server-Side Request Forgery)** : Validation stricte des URL fournies par les utilisateurs, listes blanches de domaines autorisés, désactivation des redirections automatiques.
 
----
+6. **Insecure Design & Threat Modeling** :
+   * Risque : Défaut de conception sécurisée dès l'architecture initiale.
+   * Réponse : Modélisation des menaces, principe du moindre privilège, "Deny by Default".
 
-## Phase 8 : Python appliqué à la cybersécurité (Niveau Spécialisé / Professionnel)
+7. **Authentication Failures (Échecs d'Authentification)** :
+   * Risque : Attaques par force brute, réutilisation de mots de passe.
+   * Réponse : Intégration de MFA / Passkeys, limitation de débit (*Rate Limiting*), gestion sécurisée des cookies de session (`HttpOnly`, `Secure`, `SameSite=Lax`).
 
+8. **Software & Data Integrity Failures** :
+   * Risque : Altération de données en transit ou de bibliothèques CDN.
+   * Réponse : Subresource Integrity (SRI) sur les scripts CDN, validation des signatures de jetons JWT.
 
-Cette phase finale synthétise l'ensemble de votre parcours Python pour développer des applications spécialisées dans la sécurité défensive, l'audit réseau et l'analyse d'artéfacts [38, 42].
+9. **Security Logging & Alerting Failures** :
+   * Risque : Absence de traçabilité en cas d'intrusion.
+   * Réponse : Journalisation de tous les événements de sécurité (échecs et succès d'authentification/autorisation) avec horodatage et ID utilisateur.
 
-*   **Concepts Python à maîtriser :**
-    *   Programmation réseau bas niveau : manipulation directe de sockets clients et serveurs [156].
-    *   Architectures réseau courantes : communication fiable TCP et communication connectionless par datagrammes UDP [156].
-    *   Audit de protocoles applicatifs : parsing de requêtes HTTP, manipulation de cookies et de sessions, et extraction de données d'erreurs applicatives [29, 61, 178, 179].
-    *   Forgeage et sniffing de paquets : structure des couches Ethernet, IP, ICMP et TCP, dissection de paquets au vol [28, 165].
-    *   Sécurisation cryptographique : hachage de fichiers, chiffrement de flux de données [164, 213].
-    *   Orchestration d'outils tiers de sécurité par script [37, 52].
-    *   Conception de laboratoires de tests isolés conteneurisés [34, 168].
-*   **Compétences pratiques à acquérir :**
-    *   Concevoir des outils de diagnostic réseau rapides sans dépendance externe lourde en manipulant directement les sockets standards [50, 51].
-    *   Sniffer passivement et analyser les champs d'en-tête de paquets réseau pour identifier des configurations système défectueuses sans envoyer de requêtes intrusives [47].
-    *   Automatiser le contrôle d'intégrité de parcs de fichiers à grande échelle à l'aide de fonctions de hachage cryptographique performantes [231, 232].
-    *   Piloter et consolider les résultats d'outils d'audit externes (ex. Nmap) directement à l'intérieur de flux de données Python [36, 46].
-*   **Bibliothèques ou outils de cybersécurité à maîtriser :**
-    *   Module standard `socket` (AF_INET, SOCK_STREAM, connect_ex) [33, 51].
-    *   Module standard `hashlib` (SHA256, MD5) [231].
-    *   `scapy` : forgeage de paquets sur-mesure, ping sweeps et sniffing [28, 42, 165].
-    *   `requests` et `beautifulsoup4` : requêtes HTTP programmées et parsing HTML [29, 61, 163, 164].
-    *   `pyshark` : wrapper Wireshark/TShark pour l'analyse programmée de captures réseau (.pcap) [72, 216].
-    *   `paramiko` : interactions et exécutions de commandes SSHv2 automatisées [164, 181].
-    *   `python-nmap` : wrapper d'automatisation des scans de ports et de versions Nmap [36, 46].
-    *   `pwntools` : interaction avec des processus locaux ou des sockets bas niveau lors de l'évaluation de vulnérabilités binaires [30, 166].
-    *   `magic` : identification de types de fichiers par analyse de signatures magiques [224, 225].
-*   **Jalons de projets pratiques (Du plus simple au plus avancé) :**
-    *   **Jalon 1 : Port Scanner Standard** -> Script exploitant le module standard `socket` pour balayer une plage de ports spécifiée (1 à 1024) sur une adresse IP de laboratoire autorisée à l'aide de la méthode non bloquante `connect_ex` associée à un timeout d'une seconde [33, 51, 63, 64].
-    *   **Jalon 2 : Outil de Ping Sweep ICMP avec Scapy** -> Script exploitant `scapy` pour forger des paquets de requête d'écho ICMP destines à un sous-réseau entier de laboratoire (ex. 192.168.1.1 à 254) et collecter les réponses pour découvrir efficacement les hôtes actifs [51].
-    *   **Jalon 3 : Scanner de ports multi-threadé à haut rendement** -> Optimisation du Jalon 1 en enveloppant les requêtes de socket individuelles dans un `ThreadPoolExecutor` de 100 workers concurrents pour accélérer drastiquement le diagnostic réseau [170].
-    *   **Jalon 4 : Analyseur d'empreintes de système d'exploitation passif** -> Utilisation de `scapy` pour sniffer passivement le trafic réseau local sans émission de paquets, et en déduire l'OS des cibles par l'analyse des indicateurs TCP/IP (durée de vie TTL, taille de la fenêtre de réception TCP, options de négociation) [47, 48].
-    *   **Jalon 5 : Audit automatique de robustesse WPA2** -> Script d'automatisation exploitant `pyshark` pour lire un fichier de capture réseau (.pcap), localiser l'échange du handshake à 4 voies WPA2 et dérouler de manière programmée un dictionnaire de mots de passe test (`wordlist.txt`) pour s'assurer de l'absence de clés faibles sur le réseau validé [216, 217, 218].
-    *   **Jalon 6 : Outil de surveillance d'intégrité de fichiers système (FIM)** -> Script calculant récursivement l'empreinte de hachage SHA256 (`hashlib.sha256()`) de fichiers critiques d'une arborescence sensible, mémorisant les empreintes de référence dans une base SQLite locale, et alertant de manière automatisée par logs d'erreurs en cas d'altération suspecte d'un fichier [49, 231, 232].
-    *   **Jalon 7 : Orchestrateur d'analyse dynamique automatisée en Sandbox** -> Script d'orchestration de laboratoire lançant l'exécution d'un binaire d'essai suspect au sein d'une sandbox sécurisée (via `subprocess.Popen`), auditant les modifications de fichiers, les altérations de la base de registre (via le module `winreg`), collectant les connexions générées par des sockets et extrayant les chaînes de caractères ("strings") du fichier avant d'exporter un rapport synthétique consolidé au format JSON [75, 76, 221, 227, 228, 229, 235].
-*   **Critères de validation :**
-    *   Savoir concevoir des scripts d'audit réseau et d'automatisation système entièrement fonctionnels, respectant les normes de codage PEP 8, documentés et journalisés, et s'exécutant au sein d'un conteneur Docker standard d'analyse (ex. basé sur Kali Linux rolling) [34, 168, 210].
-*   **Connaissances complémentaires requises :**
-    *   Modèle OSI, protocoles réseau fondamentaux (TCP, UDP, IP, ICMP, DNS, HTTP, SSH), conteneurisation Docker, cadre légal et éthique du pentesting [31, 41, 156, 172].
+10. **Mishandling of Exceptional Conditions (Mauvaise Gestion des Exceptions)** :
+    * Risque : Blocs `try/except: pass`, fuites de stack trace ou états incohérents en BDD.
+    * Réponse : Gestion explicite des exceptions, utilisation de transactions atomiques BDD, masquage des détails internes aux utilisateurs.
 
----
-
-## Compétences indispensables avant de se spécialiser en cybersécurité
-
-Il est vain et dangereux de vouloir concevoir des outils de sécurité en Python sans maîtriser des fondamentaux robustes de programmation. Les **compétences clés** suivantes doivent être **totalement acquises** avant d'entamer tout développement orienté cybersécurité :
-
-1.  **Gestion absolue des exceptions et du contrôle d'erreur** : Un outil d'audit ou un scanner de vulnérabilités ne doit jamais crasher brusquement face à une anomalie. Vous devez maîtriser l'interception chirurgicale d'exceptions via les blocs `try/except/else/finally` pour garantir la continuité des tâches [12, 18, 129].
-2.  **Manipulation d'octets, d'encodages et de buffers** : Les flux d'information réseau et système transitent sous forme de données binaires brutes. Vous devez savoir convertir sans hésitation des données textuelles en octets (`.encode()`) et inversement (`.decode()`), et comprendre les encodages fondamentaux comme l'UTF-8 ou l'ASCII [62, 182, 222].
-3.  **Interactions avec l'OS et le système de fichiers (Programmation Système)** : Maîtriser le parcours d'arborescences disque (`os.walk`), la vérification de métadonnées de fichiers (permissions via `os.chmod`, horodatages d'accès/modification via `os.utime`) et l'exécution sécurisée d'outils tiers du système d'exploitation à l'aide de pipelines `subprocess` bidirectionnels étanches [53, 171, 189, 201].
-4.  **Maîtrise des Collections de structures de données** : Savoir exploiter l'efficacité algorithmique des structures de données standards : utiliser des dictionnaires (`dicts`) pour indexer des données ou des configurations de tests, et des ensembles (`sets`) pour des tests d'appartenance ultra-rapides en temps constant $O(1)$ (essentiel pour filtrer des listes d'IP ou valider des signatures) [106, 149].
-5.  **Journalisation structurée au lieu de l'affichage console** : Proscrire définitivement l'utilisation de `print()` pour le débogage ou le suivi de vos outils au profit du module de logging standard. Un outil de sécurité doit documenter de façon stricte et datée ses activités au sein d'un fichier de trace propre [13, 209, 293, 294].
-6.  **Développement modulaire orienté objet** : Savoir encapsuler la logique de vos outils au sein de classes propres disposant de variables d'instance isolées afin de concevoir des agents de laboratoire extensibles et lisibles par d'autres ingénieurs [20, 21].
-7.  **Assertions Fail-Fast** : Implémenter des verrous logiques via des instructions `assert` pour valider les conditions pré-requises de sécurité et forcer l'arrêt immédiat et sécurisé du programme en cas de compromission ou d'incohérence logicielle [11, 90, 134].
+### 6.2 Outils de Hardening & Inspection Dynamique
+* **Limitation de Débit (Rate Limiting)** : Protection des routes sensibles avec `slowapi` (FastAPI) ou `Flask-Limiter` / `django-ratelimit`.
+* **Inspection Applicative Avancée** :
+  * Utilisation de modules d'inspection de requêtes comme `fastapi-guard`, `djapi-guard` ou `flaskapi-guard` pour intercepter et bloquer automatiquement les tentatives d'injections SQL/XSS, traversées de répertoires (`../`), et scanners automatisés.
+* **Configuration des En-têtes HTTP de Sécurité** :
+  * Enforcement de `Strict-Transport-Security` (HSTS), `Content-Security-Policy` (CSP), `X-Frame-Options` (anti-clickjacking), `X-Content-Type-Options: nosniff`.
+  * Utilisation de `Flask-Talisman` (Flask) ou `ContentSecurityPolicyMiddleware` (Django 6.0).
+* **Audits & Tests de Pénétration (DevSecOps)** :
+  * Analyse statique avec `Bandit` et `Corgea` / `Snyk`.
+  * Tests d'API automatisés avec des scannables d'injections et fuzzer OWASP ZAP / Escape.

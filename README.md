@@ -1,30 +1,53 @@
-# Exercices Python
+# Apprentissage Python — Développement Web & Sécurité Applicative
 
-Dépôt centralisant mes exercices d'apprentissage Python. Chaque exercice vit dans son propre dossier sous `exercices/`, avec son énoncé et sa solution.
+Dépôt centralisant mon apprentissage de Python, structuré autour d'une roadmap en phases progressives (voir [`roadmap/roadmap.md`](roadmap/roadmap.md)), orientée développement web (FastAPI en priorité, aperçu de Flask et Django) avec une phase finale de cybersécurité applicative web (OWASP Top 10, hardening).
 
 ## But du repo
 
-J'apprends Python **manuellement**, en écrivant moi-même chaque solution sans assistance IA. Le seul rôle de l'IA ici est de me fournir un **exercice journalier**, avec une difficulté croissante au fil du temps.
+J'apprends Python avec l'aide de Claude. Le rôle de Claude se limite strictement à :
+- me fournir les exercices (énoncés dans `roadmap/PhaseN/exoX-phaseN.md`) ;
+- me guider si je bloque, par indices progressifs, jamais en me donnant la solution directement, sauf si je la demande explicitement.
+
+C'est moi qui écris le code, trouve mes bugs et valide mes solutions.
+
+**Objectif** : réussir un entretien technique de recrutement fin novembre 2026, avec un socle Python solide, une bonne maîtrise de FastAPI (et des bases de Flask/Django), et une compréhension pratique de la sécurité applicative web.
+
+## Roadmap
+
+La progression suit 6 phases, détaillées dans [`roadmap/roadmap.md`](roadmap/roadmap.md) :
+
+| Phase | Sujet |
+|---|---|
+| 1 | Socle Python moderne (POO, exceptions, décorateurs, typage, tooling) & fondations HTTP |
+| 2 | Flask — fondamentaux du micro-framework |
+| 3 | Django — fondamentaux du framework full-stack |
+| 4 | FastAPI — spécialisation principale (async, Pydantic, sécurité, architecture) |
+| 5 | Industrialisation, déploiement & DevOps |
+| 6 | Cybersécurité web & hardening applicatif (OWASP Top 10) |
 
 ## Structure
 
 ```
-exercices/
-├── 00_exemple/
-│   ├── README.md   # énoncé + notes
-│   └── main.py     # solution
+roadmap/
+├── roadmap.md                  # Roadmap complète, détaillée phase par phase
+├── Phase1/
+│   ├── Phase1.md                # Titres des exercices de la phase + suivi de progression
+│   ├── exo1-phase1.md           # Énoncé de l'exercice 1
+│   ├── exo2-phase1.md           # Énoncé de l'exercice 2
+│   └── ...
+├── Phase2/
+│   └── ...
 └── ...
+exercices/
+└── <a organiser au fur et à mesure : un dossier par exercice avec le script Python correspondant>
 ```
 
-## Exercices
-
-| # | Nom | Description |
-|---|-----|-------------|
-| 00 | [Exemple](exercices/00_exemple) | Dossier modèle servant de base aux futurs exercices |
+Chaque phase a son propre dossier dans `roadmap/`. Le fichier `PhaseN.md` ne contient que la liste des titres d'exercices et une section `## Progression` (cases à cocher) que je mets à jour moi-même au fur et à mesure. Chaque énoncé détaillé est fourni par Claude dans son propre fichier `exoX-phaseN.md`.
 
 ## Convention
 
-Chaque nouvel exercice :
-1. Crée un dossier `exercices/NN_nom_court/`
-2. Ajoute un `README.md` (énoncé + notes) et un `main.py` (solution)
-3. Ajoute une ligne dans le tableau ci-dessus
+Pour chaque nouvel exercice de la roadmap :
+1. Claude ajoute l'énoncé dans `roadmap/PhaseN/exoX-phaseN.md`.
+2. Je code la solution dans `exercices/PhaseN/exoX-nom-court/`.
+3. Une fois l'exercice validé, je coche la case correspondante dans `roadmap/PhaseN/PhaseN.md`.
+4. Si je bloque plus de deux jours sur le même exercice ou la même notion, Claude ne complexifie pas la suite : il me donne un autre exercice sur le même thème pour consolider avant d'avancer.
