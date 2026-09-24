@@ -28,8 +28,6 @@
 # FIN
 
 
-from calendar import c
-
 
 def calculatrice():
     n1 = float(input("Saisissez le premier nombre: "))
@@ -44,6 +42,10 @@ def calculatrice():
         resultat = n1 * n2
     elif op == "/":
         resultat = n1 / n2
+    else:
+        print("Operation invalide")
+        return
+
     print(f"le resultat de {n1} {op} {n2} est {resultat}")
 
 

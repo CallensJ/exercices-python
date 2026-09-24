@@ -55,41 +55,39 @@
 #     FIN SI
 # FIN
 
-
-def password_checker():
-    while True:
-        user_password = input("Entrez votre mot de passe : ")
-        #verifie la longueur du mdp
-        if len(user_password) < 8:
-            print("Le mot de passe doit contenir au moins 8 caracteres. ")
-            continue
-
-        #initisalisation des flags
-        a_majuscule = False
-        a_minuscule = False
-        a_chiffre = False
-
-        #Verifier chaque caractere du mdp
-        for char in user_password:
-            if char.isupper():
-                a_majuscule = True
-            elif char.islower():
-                a_minuscule = True
-            elif char.isdigit():
-                a_chiffre = True
-
-        if not a_majuscule or not a_minuscule or not a_chiffre:
-            if not a_majuscule:
-                print("Le mot de passe doit contenir au moins une lettre majuscule.")
-            if not a_minuscule:
-                print("Le mot de passe doit contenir au moins une lettre minuscule.")
-            if not a_chiffre:
-                print("Le mot de passe doit contenir au moins un chiffre.")
-            continue
-        else:
-            print("Mot de passe valide !")
-            break
-
-
-
-password_checker()
+#METHODE 1
+# def password_checker():
+#     while True:
+#         user_password = input("Entrez votre mot de passe : ")
+#         #verifie la longueur du mdp
+#         if len(user_password) < 8:
+#             print("Le mot de passe doit contenir au moins 8 caracteres. ")
+#             continue
+#
+#         #initisalisation des flags
+#         a_majuscule = False
+#         a_minuscule = False
+#         a_chiffre = False
+#
+#         #Verifier chaque caractere du mdp
+#         for char in user_password:
+#             if char.isupper():
+#                 a_majuscule = True
+#             elif char.islower():
+#                 a_minuscule = True
+#             elif char.isdigit():
+#                 a_chiffre = True
+#
+#         if not a_majuscule or not a_minuscule or not a_chiffre:
+#             if not a_majuscule:
+#                 print("Le mot de passe doit contenir au moins une lettre majuscule.")
+#             if not a_minuscule:
+#                 print("Le mot de passe doit contenir au moins une lettre minuscule.")
+#             if not a_chiffre:
+#                 print("Le mot de passe doit contenir au moins un chiffre.")
+#             continue
+#         else:
+#             print("Mot de passe valide !")
+#             break
+#
+# password_checker()

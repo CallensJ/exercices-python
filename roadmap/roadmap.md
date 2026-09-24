@@ -164,6 +164,58 @@ Cette phase vise à optimiser l'efficacité de vos programmes, à adopter une sy
 
 ---
 
+## Phase 5bis : Aperçu FastAPI et Django (Niveau Intermédiaire → Avancé)
+
+Cette phase n'est pas issue des sources originales du Notebook mais a été ajoutée pour couvrir l'objectif webdev de l'apprenant. Il ne s'agit pas d'une spécialisation complète (l'objectif final reste la cybersécurité) mais d'un aperçu suffisant pour être capable de lire, comprendre et adapter du code FastAPI ou Django professionnel. Elle s'appuie directement sur les acquis des Phases 3 (OOP), 4 (erreurs, fichiers, modules) et 5 (décorateurs, typage, annotations).
+
+### Module A : FastAPI
+
+*   **Concepts Python à maîtriser :**
+    *   Création de routes avec les décorateurs `@app.get()`, `@app.post()`, etc.
+    *   Validation de données avec **Pydantic** (modèles `BaseModel`, typage strict des champs).
+    *   Paramètres de requête, paramètres de chemin (`path params`) et corps de requête (`request body`).
+    *   Injection de dépendances de base (`Depends()`).
+    *   Codes de statut HTTP et gestion d'erreurs via `HTTPException`.
+*   **Compétences pratiques à acquérir :**
+    *   Démarrer un serveur de développement avec `uvicorn`.
+    *   Construire un CRUD simple (Create, Read, Update, Delete) sur une ressource unique, avec persistance dans une base SQLite légère.
+    *   Lire la documentation interactive auto-générée (`/docs`) pour tester une API.
+*   **Bibliothèques ou outils pertinents :**
+    *   `fastapi`, `uvicorn`, `pydantic`.
+    *   `sqlite3` (module standard) ou `SQLAlchemy` en version simplifiée.
+*   **Exercices ou types de projets recommandés :**
+    *   *Mini API "Todo List"* : routes GET/POST/DELETE sur une liste de tâches stockée en mémoire, puis persistée en SQLite.
+    *   *Validateur de payload* : modèle Pydantic imposant des contraintes de types et de formats sur les données reçues, avec gestion des erreurs de validation.
+*   **Critères de validation :**
+    *   Être capable de lancer une API FastAPI simple, de comprendre le rôle de chaque décorateur de route, et d'expliquer pourquoi Pydantic valide les données avant qu'elles n'atteignent la logique métier.
+
+### Module B : Django
+
+*   **Concepts Python à maîtriser :**
+    *   Architecture MVT (Model-View-Template) et son fonctionnement général.
+    *   L'ORM Django : définition de modèles (`models.Model`), migrations (`makemigrations`, `migrate`).
+    *   Vues basées sur des fonctions (`function-based views`) pour commencer.
+    *   Le routage d'URL (`urls.py`).
+    *   L'interface d'administration Django (`admin.py`) générée automatiquement.
+*   **Compétences pratiques à acquérir :**
+    *   Créer un projet Django et une application interne (`django-admin startproject` / `startapp`).
+    *   Définir un modèle simple et l'enregistrer dans l'admin pour manipuler des données sans écrire de vue.
+    *   Écrire une vue basique retournant une réponse HTML ou JSON.
+*   **Bibliothèques ou outils pertinents :**
+    *   `django` (le framework lui-même).
+    *   `django-admin` (CLI de gestion de projet).
+*   **Exercices ou types de projets recommandés :**
+    *   *Carnet de contacts* : un modèle `Contact` (nom, email, téléphone), géré entièrement depuis l'admin Django, avec une vue de liste simple côté public.
+*   **Critères de validation :**
+    *   Être capable d'expliquer la différence entre un modèle FastAPI/Pydantic et un modèle Django/ORM, et de situer où se trouve la logique de validation, de routage et de persistance dans chaque framework.
+
+### Connaissances complémentaires requises
+
+*   Notions de base du protocole HTTP (méthodes, codes de statut, headers) — déjà abordées en Phase 8 pour l'audit, ici du point de vue "serveur".
+*   Notion de base de données relationnelle (tables, clés primaires/étrangères) — utile pour comprendre l'ORM Django et la persistance SQLite côté FastAPI.
+
+---
+
 ## Phase 6 : Algorithmique et structures de données utiles aux entretiens (Niveau Avancé)
 
 Cette phase prépare aux exigences des entretiens techniques en abordant l'analyse de complexité et la résolution méthodique de problèmes à l'aide de structures de données avancées [91, 92].
@@ -232,7 +284,6 @@ Les programmes professionnels doivent souvent accomplir des tâches concurrentes
 
 ## Phase 8 : Python appliqué à la cybersécurité (Niveau Spécialisé / Professionnel)
 
-*Avertissement éthique : Le développement d'outils de sécurité et l'analyse de réseaux doivent s'effectuer impérativement dans des environnements de laboratoire contrôlés ou sur des cibles pour lesquelles vous détenez une autorisation écrite préalable explicite [39, 41].*
 
 Cette phase finale synthétise l'ensemble de votre parcours Python pour développer des applications spécialisées dans la sécurité défensive, l'audit réseau et l'analyse d'artéfacts [38, 42].
 
