@@ -1,4 +1,4 @@
-# Apprentissage Python — Développement Web & Sécurité Applicative
+# Apprentissage Python Développement Web & Sécurité Applicative
 
 Dépôt centralisant mon apprentissage de Python, structuré autour d'une roadmap en phases progressives (voir [`roadmap/roadmap.md`](roadmap/roadmap.md)), orientée développement web (FastAPI en priorité, aperçu de Flask et Django) avec une phase finale de cybersécurité applicative web (OWASP Top 10, hardening).
 
