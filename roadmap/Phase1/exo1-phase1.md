@@ -26,7 +26,7 @@ Tu vas écrire un script `profile_card.py` qui construit et affiche une fiche d'
    - un calcul simple utilisant l'âge (ex : âge en mois, ou année de naissance approximative)
    - un booléen calculé (ex : `is_adult = age >= 18`) affiché dans la phrase
    - la liste des loisirs
-   - le tuple affiché tel quel
+    - le tuple affiché tel quel 
    - le set de compétences affiché tel quel
 
 7. Utilise `type()` ou `isinstance()` pour vérifier et afficher le type réel d'au moins 3 variables différentes (une de chaque type primitif utilisé).

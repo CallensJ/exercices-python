@@ -4,13 +4,11 @@ Dépôt centralisant mon apprentissage de Python, structuré autour d'une roadma
 
 ## But du repo
 
-J'apprends Python avec l'aide de Claude. Le rôle de Claude se limite strictement à :
+J'apprends Python. Le rôle de Claude se limite strictement à :
 - me fournir les exercices (énoncés dans `roadmap/PhaseN/exoX-phaseN.md`) ;
 - me guider si je bloque, par indices progressifs, jamais en me donnant la solution directement, sauf si je la demande explicitement.
 
-C'est moi qui écris le code, trouve mes bugs et valide mes solutions.
-
-**Objectif** : réussir un entretien technique de recrutement fin novembre 2026, avec un socle Python solide, une bonne maîtrise de FastAPI (et des bases de Flask/Django), et une compréhension pratique de la sécurité applicative web.
+**Objectif** : Avoir un socle Python solide, une bonne maîtrise de FastAPI (et des bases de Flask/Django), et une compréhension pratique de la sécurité applicative web.
 
 ## Roadmap
 
